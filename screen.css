@@ -94,8 +94,8 @@ header#header h1 a {
 	line-height: 1.25em;
 	padding: 1em 1.25em 1em 1em;
 	font-size-adjust: 100%;
-	margin: 3%;
-	text-align: center;
+	margin: 2.5% 15%;
+	text-align: left;
 	padding: 5%;
   background-color: #DB3434;
 }
@@ -105,10 +105,10 @@ header#header h1 a {
   color: #FFFFFF;
 	font-size: 150%;
 	line-height: 1.25em;
-	padding: 1em 1.25em 1em 1em;
+	padding: 5em 1.25em 1em 1em;
 	font-size-adjust: 100%;
-	margin: 3%;
-	text-align:center;
+	margin: 2.5% 15%;
+	text-align:left;
 	padding: 5%;
   background-color: #B2B09B;
 }
@@ -117,12 +117,14 @@ header#header h1 a {
   text-decoration: none;
   color: #DB3434;
   font-size: 200%;
+  line-height: 1em;
 }
 
 .post_link a {
   text-decoration: none;
   color: #B2B09B;
   font-size: 120%;
+  text-align:left;
 }
 
 .timestamp {
@@ -146,4 +148,14 @@ header#header h1 a {
   font-size: 100%;
 }
 
+@media screen and (max-width: 45em) {
+
+.post_text  {
+    margin: 2.5% 1%;
+}
+
+.post_link {
+    margin: 2.5% 1%;
+}
+}
 
