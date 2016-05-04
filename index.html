@@ -9,7 +9,7 @@
     {/block:Description}
     <link>
     <link href='{RSS}' rel='alternate' type='application/rss+xml'>
-    <link href="http://static.tumblr.com/m6nmumr/pSpo6o0gm/screen.css" rel="stylesheet"></link>
+    <link href="http://static.tumblr.com/m6nmumr/SWJo6o2q3/screen.css" rel="stylesheet"></link>
     </head>
       
     
@@ -99,9 +99,21 @@
     {/block:HasTags}
     </div>
     
-    
     {/block:Quote}
     </div>
+    
+    {block:Pagination}
+    <div class="page">
+    {block:PreviousPage}
+    <a href="{PreviousPage}">&lt;</a>
+    {/block:PreviousPage}
+    {CurrentPage}
+    {block:NextPage}
+    <a href="{NextPage}">&gt;</a>
+    {/block:NextPage}
+    {/block:Pagination}
+    </div>
+    
     </div>
    
   </body>
