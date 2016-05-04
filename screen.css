@@ -72,13 +72,17 @@ header#header {
 }
 
 header#header h1 a {
-  font-family: Didot, â€œDidot LT STDâ€, â€œHoefler Textâ€, Garamond, â€œTimes    New Romanâ€, serif;
+  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
   text-decoration:none;
   color: #FFA987;
 }
 
+header#header h1 a:hover, a:active{
+  color: #776F6F;
+}
+
 #description {
-  font-family: Didot, â€œDidot LT STDâ€, â€œHoefler Textâ€, Garamond, â€œTimes    New Romanâ€, serif;
+  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
   color: #FFFFFF;
   font-size: 75%;
   margin: 0% 25%;
@@ -89,7 +93,7 @@ body {
 }
 
 .post_text {
-  font-family: Didot, â€œDidot LT STDâ€, â€œHoefler Textâ€, Garamond, â€œTimes New Romanâ€, serif;
+  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
   color: #A51818;
 	font-size: 150%;
 	line-height: 1.25em;
@@ -101,7 +105,7 @@ body {
 }
 
 .post_link {
-  font-family: Didot, â€œDidot LT STDâ€, â€œHoefler Textâ€, Garamond, â€œTimes    New Romanâ€, serif;
+  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
   color: #A51818;
 	font-size: 150%;
 	line-height: 1.25em;
@@ -113,7 +117,7 @@ body {
 }
 
 .post_quote {
-    font-family: Didot, â€œDidot LT STDâ€, â€œHoefler Textâ€, Garamond, â€œTimes New Romanâ€, serif;
+    font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
   color: #A51818;
 	font-size: 250%;
 	line-height: 1.25em;
@@ -128,6 +132,18 @@ body {
   text-align: left;
   color: #000000;
   font-size: 50%;
+}
+
+.post_photo {
+    font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
+  color: #A51818;
+	font-size: 250%;
+	line-height: 1.25em;
+	font-size-adjust: 100%;
+	margin: 2.5% 10%;
+	text-align:left;
+	padding: 5%;
+  background-color: #FEFFF9;
 }
 
 .post_text a {
@@ -147,27 +163,18 @@ body {
 .timestamp {
   color: #000000;
   text-align: right;
-  font-family: â€˜Arial Narrowâ€™, sans-serif;
-  font-size: 50%;
+  font-family: ‘Arial Narrow’, sans-serif;
+  font-size: 15px;
 }
 
-.text_tags, .link_tags, .quote_tags {
+.text_tags, .link_tags, .quote_tags, link_tags {
   text-align: left;
 }
 
-.text_tags a {
+.text_tags a, .link_tags a, .quote_tags a, link_tags a {
+  text-decoration: none;  
   color:#1E1E24;
-  font-size: 100%;
-}
-
-.link_tags a {
-  color:#1E1E24;
-  font-size: 100%;
-}
-
-.quote_tags a {
-  color:#1E1E24;
-  font-size: 100%;
+  font-size: 25px;
 }
 
 .page {
