@@ -53,11 +53,11 @@ table {
   http://www.modularscale.com/?18&px&1.25&web&text
 */
 
+strong{
+	font-weight: bold;
+}
+
 header {
-	background: #254441;
-	border-bottom-width: 5px;
-	border-bottom-color: #43AA8B;
-	border-bottom-style: solid;
 	position:block;
 	top: 0px;
 	right: 0px;
@@ -66,65 +66,82 @@ header {
 }
 
 body {
-	background-color: #FF6F59;
+	background-color: #444140;
 }
 
 header#header {
   text-align: center;
   font-size: 200%;
-}
-
-header#header img {
-  margin-top: 2%;
-  padding: 0.5%;
-  background: #43AA8B;
-  background-repeat: no-repeat;
+  padding-top: 2%;
 }
 
 header#header h1 a {
+  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
   text-decoration:none;
-  color: #FF6F59;
+  color: #FFA987;
 }
 
+#description {
+  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
+  color: #FFFFFF;
+  font-size: 75%;
+  margin: 0% 25%;
+}
 
 .post_link {
   font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
-  color: #FFFFFF;
+  color: #A33535;
 	font-size: 150%;
 	line-height: 1.25em;
-	padding: 1em 1.25em 1em 1em;
 	font-size-adjust: 100%;
-	margin: 2.5% 15%;
+	margin: 2.5% 10%;
 	text-align: left;
 	padding: 5%;
-  background-color: #DB3434;
+  background-color: #FEFFF9;
 }
 
 .post_text {
   font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
-  color: #FFFFFF;
+  color: #A33535;
 	font-size: 150%;
 	line-height: 1.25em;
-	padding: 5em 1.25em 1em 1em;
 	font-size-adjust: 100%;
-	margin: 2.5% 15%;
+	margin: 2.5% 10%;
 	text-align:left;
 	padding: 5%;
-  background-color: #B2B09B;
+  background-color: #FEFFF9;
 }
 
-.post_text a {
-  text-decoration: none;
-  color: #DB3434;
-  font-size: 200%;
-  line-height: 1em;
+.post_quote {
+    font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
+  color: #A33535;
+	font-size: 250%;
+	line-height: 1.25em;
+	font-size-adjust: 100%;
+	margin: 2.5% 10%;
+	text-align:left;
+	padding: 5%;
+  background-color: #FEFFF9;
+}
+
+.source {
+  text-align: left;
+  color: #000000;
+  font-size: 50%;
 }
 
 .post_link a {
   text-decoration: none;
-  color: #B2B09B;
+  color: #1E1E24;
   font-size: 120%;
   text-align:left;
+}
+
+.post_text a {
+  text-decoration: none;
+  color: #1E1E24;
+  font-size: 200%;
+  line-height: 1em;
 }
 
 .timestamp {
@@ -134,28 +151,47 @@ header#header h1 a {
   font-size: 50%;
 }
 
-.text_tags, .link_tags {
+.text_tags, .link_tags, .quote_tags {
   text-align: left;
 }
 
 .text_tags a {
-  color:#DB3434;
+  color:#1E1E24;
   font-size: 100%;
 }
 
 .link_tags a {
-  color:#FF6F59;
+  color:#1E1E24;
+  font-size: 100%;
+}
+
+.quote_tags a {
+  color:#1E1E24;
   font-size: 100%;
 }
 
 @media screen and (max-width: 45em) {
 
 .post_text  {
-    margin: 2.5% 1%;
+    margin: 2.5% 2.5%;
 }
 
 .post_link {
-    margin: 2.5% 1%;
-}
+    margin: 2.5% 2.5%;
 }
 
+.post_quote {
+  margin: 2.5% 2.5%;
+}
+
+#description  {
+    font-size: 60%;
+    margin: 0% 10%;
+}
+
+@media screen and (max-width: 65em) {
+
+#description  {
+    margin: 0% 10%;
+}
+}
