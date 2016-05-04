@@ -53,160 +53,97 @@ table {
   http://www.modularscale.com/?18&px&1.25&web&text
 */
 
-
-h1 {
-  font-family: Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif;
-  color: black;
-  font-size: 2em;
-  line-height: 1.25em;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  padding-left: 1.25em;
-  padding-right: 0em; 
-  font-size-adjust: 100%;
-}
-
-
-body {
-	background-color: #FFFF00;
-	font-family: Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif;
-}
-
-
-p {
-	font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
-  color: #616161;
-	font-size: 150%;
-	line-height: 1.25em;
-	padding: 1em 1.25em 1em 1em;
-	font-size-adjust: 100%;
-	margin: 0em;
-}
-
 header {
-	background: #FFFFFF;
+	background: #254441;
 	border-bottom-width: 5px;
-	border-bottom-color: #D3D3D3;
+	border-bottom-color: #43AA8B;
 	border-bottom-style: solid;
-	position:fixed;
+	position:block;
 	top: 0px;
 	right: 0px;
 	left: 0px;
 	width: 100%;
 }
 
-nav
-{
-	float:right;
-}
-nav ul li {
-	list-style-type: none;
-	display: inline-block;
-	padding: 0em;
-	margin-right: 1.5em;
-	font-size: 125%;
+body {
+	background-color: #FF6F59;
 }
 
-nav ul li a:link, a:visited{
-	color: black;
-	text-decoration: none;
-	display: block;
-}
-
-nav ul li a:hover, a:active {
-	color: #726E6D;
-	text-decoration: none;
-}
-
-
-strong{
-	font-weight: bold;
-}
-
-em{
-	font-style: italic;
-}
-
-
-footer
-{
+header#header {
   text-align: center;
-  padding: 2%;
-}
-.intro
-{
-	font-size: 600%;
-	text-align: left;
-	padding: 24% 0% 5% 0%;
-	margin-left: 10%;
-	margin-right: 10%;
+  font-size: 200%;
 }
 
-.h3 {
-	font-weight:bold;
+header#header img {
+  margin-top: 2%;
+  padding: 0.5%;
+  background: #43AA8B;
+  background-repeat: no-repeat;
+}
+
+header#header h1 a {
+  text-decoration:none;
+  color: #FF6F59;
+}
+
+
+.post_link {
+  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
+  color: #FFFFFF;
 	font-size: 150%;
+	line-height: 1.25em;
+	padding: 1em 1.25em 1em 1em;
+	font-size-adjust: 100%;
+	margin: 3%;
+	text-align: center;
+	padding: 5%;
+  background-color: #DB3434;
 }
 
-
-.resumepieces
-{
-	text-align: left;
-	font-size: 100%;
-	padding-left: 15%;	
-}
-
-.logo
-{
-	display: block;
-	float:left;
-	padding: 0.5%;
-}
-
-.logo a
-{
-	color: #FFFF00;
-  text-transform: uppercase;
-	text-decoration: none;
-  font-size: 225%;
-  display: block;
-}
-
-.about
-{
-   margin-top: 23%;
-}
-
-#resumeTitle {
+.post_text {
+  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
+  color: #FFFFFF;
+	font-size: 150%;
+	line-height: 1.25em;
+	padding: 1em 1.25em 1em 1em;
+	font-size-adjust: 100%;
+	margin: 3%;
 	text-align:center;
-	padding:24% 0% 0% 0%;
+	padding: 5%;
+  background-color: #B2B09B;
 }
 
-#name{
-	font-family: Copperplate,"Copperplate Gothic Light",fantasy;
-	text-align:center;
-	color:black;
-	font-size: 3em;
+.post_text a {
+  text-decoration: none;
+  color: #DB3434;
+  font-size: 200%;
+}
+
+.post_link a {
+  text-decoration: none;
+  color: #B2B09B;
+  font-size: 120%;
+}
+
+.timestamp {
+  color: #000000;
+  text-align: right;
+  font-family: ‘Arial Narrow’, sans-serif;
+  font-size: 50%;
+}
+
+.text_tags, .link_tags {
+  text-align: left;
+}
+
+.text_tags a {
+  color:#DB3434;
+  font-size: 100%;
+}
+
+.link_tags a {
+  color:#FF6F59;
+  font-size: 100%;
 }
 
 
-
-/*
-@media screen and (min-width: 33.333333333333336em) 
-{
-  figure {
-    position: relative;
-  }
-  img {
-    position: absolute;
-    margin-right: 10%;
-    width: 30%;
-   
-    }
-  figcaption {
-    position: absolute;
-    width: 100%;
-    top: 410px;
-    left: 70px;
-  }
-*/
-}
