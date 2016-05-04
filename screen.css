@@ -65,10 +65,6 @@ header {
 	width: 100%;
 }
 
-body {
-	background-color: #444140;
-}
-
 header#header {
   text-align: center;
   font-size: 200%;
@@ -88,21 +84,13 @@ header#header h1 a {
   margin: 0% 25%;
 }
 
-.post_link {
-  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
-  color: #A33535;
-	font-size: 150%;
-	line-height: 1.25em;
-	font-size-adjust: 100%;
-	margin: 2.5% 10%;
-	text-align: left;
-	padding: 5%;
-  background-color: #FEFFF9;
+body {
+	background-color: #444140;
 }
 
 .post_text {
   font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
-  color: #A33535;
+  color: #A51818;
 	font-size: 150%;
 	line-height: 1.25em;
 	font-size-adjust: 100%;
@@ -112,9 +100,21 @@ header#header h1 a {
   background-color: #FEFFF9;
 }
 
+.post_link {
+  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
+  color: #A51818;
+	font-size: 150%;
+	line-height: 1.25em;
+	font-size-adjust: 100%;
+	margin: 2.5% 10%;
+	text-align: left;
+	padding: 5%;
+  background-color: #FEFFF9;
+}
+
 .post_quote {
     font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
-  color: #A33535;
+  color: #A51818;
 	font-size: 250%;
 	line-height: 1.25em;
 	font-size-adjust: 100%;
@@ -130,18 +130,18 @@ header#header h1 a {
   font-size: 50%;
 }
 
-.post_link a {
-  text-decoration: none;
-  color: #1E1E24;
-  font-size: 120%;
-  text-align:left;
-}
-
 .post_text a {
   text-decoration: none;
   color: #1E1E24;
   font-size: 200%;
   line-height: 1em;
+}
+
+.post_link a {
+  text-decoration: none;
+  color: #1E1E24;
+  font-size: 120%;
+  text-align:left;
 }
 
 .timestamp {
@@ -168,6 +168,22 @@ header#header h1 a {
 .quote_tags a {
   color:#1E1E24;
   font-size: 100%;
+}
+
+.page {
+  text-align: center;
+  color: white;
+  font-size: 150%;
+}
+
+.page a:link, a:visited {
+  text-decoration: none;
+  color: white;
+  font-size: 75%;
+}
+
+.page a:hover, a:active {
+  color: #776F6F;
 }
 
 @media screen and (max-width: 45em) {
