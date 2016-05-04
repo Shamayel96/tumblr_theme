@@ -1,56 +1,60 @@
 %html{:lang => "en"}
   %head
     %title {Title}
-    %meta{:charset => "utf-8"}/
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}/
-    %meta{:name => "author", :content "Saja Hamayel"}/
-    {block:Description}
-    %meta{:name => "description", :content => "{MetaDescripption}}/
-    {/block:Description}
-    %link{:href => "{Favicon}" :rel => "shortcut icon"}
-    %link{:href =>"{RSS}", :rel => "alternate", :type => "application/rss+xml"}
-    %link{:href => "screen.css", :rel => "stylesheet"}
-    %body
-  %h1 {Title}
-  {block:Description}
-  %p#description {Description}
-  {/block:Description}
-  %ol#posts
-    {block:Posts}{block:Text}
-    %li.post.text
-      {block:Title}
-      %h3
-        %a{:href => "{Permalink}"} {Title}
-      {/block:Title}{Body}
-    {/block:Text}{block:Photo}
-    %li.post.photo
-      %img{:alt => "{PhotoAlt}", :src => "{PhotoURL-500}"}/
-      {block:Caption}
-      .caption {Caption}
-      {/block:Caption}
-    {/block:Photo}{block:Panorama}
-    %li.post.panorama
-      {LinkOpenTag}
-      %img{:alt => "{PhotoAlt}", :src => "{PhotoURL-Panorama}"}/
-      {LinkCloseTag}{block:Caption}
-      .caption {Caption}
-      {/block:Caption}
-    {/block:Panorama}{block:Photoset}
-    %li.post.photoset
-      {Photoset-500}{block:Caption}
-      .caption {Caption}
-      {/block:Caption}
-    {/block:Photoset}{block:Quote}
-    %li.post.link
-      <a href="{URL}" class="link" {Target}>{Name}
-      {block:Description}
-      .description {Description}
-      {/block:Description}
-    {/block:Link}{block:Chat}
-    %p#footer
-    {block:PreviousPage}
-    %a{:href => "{PreviousPage}"} « Previous
-    {/block:PreviousPage}{block:NextPage}
-    %a{:href => "{NextPage}"} Next »
-    {/block:NextPage}
-    %a{:href => "/archive"} Archive
+    %meta{:charset => "utf-8"}
+      %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+        %meta
+          {block:Description}
+          %meta
+            {/block:Description}
+            %link
+              %link{:href => "{RSS}", :rel => "alternate", :type => "application/rss+xml"}
+                %link{:href => "http://static.tumblr.com/m6nmumr/S54o6mmra/screen2.css", :rel => "stylesheet"}
+  %header#header
+    {block:ShowHeaderImage}
+    %a{:href => "/", :style => "background-image: url({PortraitURL-128})"}
+      %img{:alt => "avatar image", :src => "{PortraitURL-128}"}/
+    {block:ShowTitle}
+    %h1.blog-title
+      %a{:href => "/"} {Title}
+    {/block:ShowTitle}
+  %body
+    .content {Body}
+    #posts
+      {block:Posts}{block:Text}
+      .post_text
+        {block:Title}
+        %h3
+          %a{:href => "{Permalink}"} {Title}
+        {/block:Title}
+        {Body}
+        
+        {block:Date}
+        .timestamp
+          {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
+          {/block:Date}
+        {block:HasTags}
+        .text_tags
+          {block:Tags}
+          %a{:href => "{TagURLChrono}"} \#{Tag}
+          {/block:Tags}
+          {/block:HasTags}
+        {/block:Text}
+      {block:Link}
+      .post_link
+        <a href="{URL}" class="link" {Target}>{Name}
+        {block:Description}
+        .description {Description}
+        {/block:Description}
+        
+        {block:Date}
+        .timestamp
+          {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
+          {/block:Date}
+        {block:HasTags}
+        .link_tags
+          {block:Tags}
+          %a{:href => "{TagURLChrono}"} \#{Tag}
+          {/block:Tags}
+          {/block:HasTags}
+        {/block:Link}
