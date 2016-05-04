@@ -9,7 +9,7 @@
             {/block:Description}
             %link
               %link{:href => "{RSS}", :rel => "alternate", :type => "application/rss+xml"}
-                %link{:href => "http://static.tumblr.com/m6nmumr/pSpo6o0gm/screen.css", :rel => "stylesheet"}
+                %link{:href => "http://static.tumblr.com/m6nmumr/SWJo6o2q3/screen.css", :rel => "stylesheet"}
   %header#header
     {block:ShowTitle}
     %h1.blog-title
@@ -80,3 +80,13 @@
           {/block:Tags}
           {/block:HasTags}
         {/block:Quote}
+      {block:Pagination}
+      .page
+        {block:PreviousPage}
+        %a{:href => "{PreviousPage}"} &lt;
+        {/block:PreviousPage}
+        {CurrentPage}
+        {block:NextPage}
+        %a{:href => "{NextPage}"} &gt;
+        {/block:NextPage}
+        {/block:Pagination}
