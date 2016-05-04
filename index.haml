@@ -9,15 +9,16 @@
             {/block:Description}
             %link
               %link{:href => "{RSS}", :rel => "alternate", :type => "application/rss+xml"}
-                %link{:href => "http://static.tumblr.com/m6nmumr/S54o6mmra/screen2.css", :rel => "stylesheet"}
+                %link{:href => "http://static.tumblr.com/m6nmumr/pSpo6o0gm/screen.css", :rel => "stylesheet"}
   %header#header
-    {block:ShowHeaderImage}
-    %a{:href => "/", :style => "background-image: url({PortraitURL-128})"}
-      %img{:alt => "avatar image", :src => "{PortraitURL-128}"}/
     {block:ShowTitle}
     %h1.blog-title
       %a{:href => "/"} {Title}
     {/block:ShowTitle}
+    
+    {block:Description}
+    #description {Description}
+    {/block:Description}
   %body
     .content {Body}
     #posts
@@ -25,7 +26,8 @@
       .post_text
         {block:Title}
         %h3
-          %a{:href => "{Permalink}"} {Title}
+          %strong
+            %a{:href => "{Permalink}"} {Title}
         {/block:Title}
         {Body}
         
@@ -42,7 +44,8 @@
         {/block:Text}
       {block:Link}
       .post_link
-        <a href="{URL}" class="link" {Target}>{Name}
+        %strong
+          <a href="{URL}" class="link" {Target}>{Name}
         {block:Description}
         .description {Description}
         {/block:Description}
@@ -58,3 +61,22 @@
           {/block:Tags}
           {/block:HasTags}
         {/block:Link}
+      {block:Quote}
+      .post_quote
+        "{Quote}"
+        {block:Source}
+        %strong
+          .source &ndash; {Source}
+        {/block:Source}
+        
+        {block:Date}
+        .timestamp
+          {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
+          {/block:Date}
+        {block:HasTags}
+        .quote_tags
+          {block:Tags}
+          %a{:href => "{TagURLChrono}"} \#{Tag}
+          {/block:Tags}
+          {/block:HasTags}
+        {/block:Quote}
