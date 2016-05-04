@@ -9,19 +9,21 @@
     {/block:Description}
     <link>
     <link href='{RSS}' rel='alternate' type='application/rss+xml'>
-    <link href="http://static.tumblr.com/m6nmumr/S54o6mmra/screen2.css" rel="stylesheet"></link>
+    <link href="http://static.tumblr.com/m6nmumr/pSpo6o0gm/screen.css" rel="stylesheet"></link>
     </head>
+      
     
-   
     <header id="header">
-    {block:ShowHeaderImage}
-    
-    <a href="/" style="background-image: url({PortraitURL-128})"><img src="{PortraitURL-128}" alt="avatar image"></a>
     
     {block:ShowTitle}
     <h1 class="blog-title"><a href="/">{Title}</a></h1>
     {/block:ShowTitle}
-    </header>
+    
+    {block:Description}
+    <div id="description">{Description}</div>
+    {/block:Description}
+    
+</header>
     
   <body>
     <div class="content">{Body}</div>
@@ -30,7 +32,7 @@
     <div class='post_text'>
     {block:Title}
     <h3>
-    <a href='{Permalink}'>{Title}</a>
+    <strong><a href='{Permalink}'>{Title}</a></strong>
     </h3>
     {/block:Title}
     {Body}
@@ -43,10 +45,10 @@
     
     {block:HasTags}
     <div class="text_tags">
-    {block:Tags}
+    {block:Tags} 
     <a href="{TagURLChrono}">#{Tag}</a>
     {/block:Tags}
-    {/block:HasTags}
+    {/block:HasTags} 
     </div>
     
     {/block:Text}
@@ -55,7 +57,7 @@
     
     {block:Link}
     <div class="post_link">
-    <a href="{URL}" class="link" {Target}>{Name}</a>
+    <strong><a href="{URL}" class="link" {Target}>{Name}</a></strong>
     {block:Description}
     <div class="description">{Description}</div>
     {/block:Description}
@@ -73,10 +75,35 @@
     {/block:Tags}
     {/block:HasTags}
     </div>
-    
+     
     {/block:Link}
+    </div>
+    
+    {block:Quote}
+    <div class="post_quote">&#34;{Quote}&#34;
+    {block:Source}
+    <strong><div class="source">&ndash; {Source}</div></strong>
+    {/block:Source}
+    
+    {block:Date}
+    <div class="timestamp">
+    {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
+    {/block:Date}
+    </div>
+    
+    {block:HasTags}
+    <div class="quote_tags">
+    {block:Tags}
+    <a href="{TagURLChrono}">&#35;{Tag}</a>
+    {/block:Tags}
+    {/block:HasTags}
+    </div>
+    
+    
+    {/block:Quote}
     </div>
     </div>
    
   </body>
+
 </html>
