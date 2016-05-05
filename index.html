@@ -9,11 +9,10 @@
     {/block:Description}
     <link>
     <link href='{RSS}' rel='alternate' type='application/rss+xml'>
-    <link href="http://static.tumblr.com/m6nmumr/SWJo6o2q3/screen.css" rel="stylesheet"></link>
+    <link href="http://static.tumblr.com/m6nmumr/MI2o6oo0a/screen.css" rel="stylesheet"></link>
     </head>
       
-    
-    <header id="header">
+<header id="header">
     
     {block:ShowTitle}
     <h1 class="blog-title"><a href="/">{Title}</a></h1>
@@ -28,20 +27,22 @@
   <body>
     <div class="content">{Body}</div>
     <div id='posts'>
-    {block:Posts}{block:Text}
+    {block:Posts}
+    
+    
+    {block:Text}
     <div class='post_text'>
-    {block:Title}
-    <h3>
-    <strong><a href='{Permalink}'>{Title}</a></strong>
-    </h3>
-    {/block:Title}
-    {Body}
     
     {block:Date}
     <div class="timestamp">
     {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
     {/block:Date}
     </div>
+    
+    {block:Title}
+    <strong><a href="{Permalink}">{Title}</a></strong>
+    {/block:Title}
+    {Body}
     
     {block:HasTags}
     <div class="text_tags">
@@ -50,23 +51,24 @@
     {/block:Tags}
     {/block:HasTags} 
     </div>
-    
     {/block:Text}
     </div>
     
     
+    
     {block:Link}
     <div class="post_link">
-    <strong><a href="{URL}" class="link" {Target}>{Name}</a></strong>
-    {block:Description}
-    <div class="description">{Description}</div>
-    {/block:Description}
     
     {block:Date}
     <div class="timestamp">
     {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
     {/block:Date}
     </div>
+    
+    <strong><a href="{URL}" {Target}>{Name}</a></strong>
+    {block:Description}
+    <div class="description">{Description}</div>
+    {/block:Description}
     
     {block:HasTags}
     <div class="link_tags">
@@ -79,17 +81,22 @@
     {/block:Link}
     </div>
     
+    
+    
     {block:Quote}
-    <div class="post_quote">&#34;{Quote}&#34;
-    {block:Source}
-    <strong><div class="source">&ndash; {Source}</div></strong>
-    {/block:Source}
+    <div class="post_quote">
     
     {block:Date}
-    <div class="timestamp">
+     <div class="timestamp">
     {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
     {/block:Date}
     </div>
+    
+    &#34;{Quote}&#34;
+    
+    {block:Source}
+    <strong><div class="source">&ndash; {Source}</div></strong>
+    {/block:Source}
     
     {block:HasTags}
     <div class="quote_tags">
@@ -102,6 +109,36 @@
     {/block:Quote}
     </div>
     
+    
+    
+    {block:Photo}
+    <div class="post_photo">
+    
+    {block:Date}
+    <div class="timestamp">
+    {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
+    {/block:Date}
+    </div>
+    
+    <a href="{PhotoURL-500}"><img src="{PhotoURL-500}" alt="{PhotoAlt}"/></a>
+    {block:Caption}
+    <div class="caption">{Caption}</div>
+    {/block:Caption}
+    
+    {block:HasTags}
+    <div class="image_tags">
+    {block:Tags}
+    <a href="{TagURLChrono}">#{Tag}</a>
+    {/block:Tags}
+    {/block:HasTags}
+    </div>
+    
+    {/block:Photo}
+    </div>
+    
+    {/block:Posts}
+    
+  
     {block:Pagination}
     <div class="page">
     {block:PreviousPage}
