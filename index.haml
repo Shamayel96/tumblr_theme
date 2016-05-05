@@ -9,7 +9,7 @@
             {/block:Description}
             %link
               %link{:href => "{RSS}", :rel => "alternate", :type => "application/rss+xml"}
-                %link{:href => "http://static.tumblr.com/m6nmumr/SWJo6o2q3/screen.css", :rel => "stylesheet"}
+                %link{:href => "http://static.tumblr.com/m6nmumr/MI2o6oo0a/screen.css", :rel => "stylesheet"}
   %header#header
     {block:ShowTitle}
     %h1.blog-title
@@ -22,19 +22,21 @@
   %body
     .content {Body}
     #posts
-      {block:Posts}{block:Text}
+      {block:Posts}
+      
+      
+      {block:Text}
       .post_text
-        {block:Title}
-        %h3
-          %strong
-            %a{:href => "{Permalink}"} {Title}
-        {/block:Title}
-        {Body}
-        
         {block:Date}
         .timestamp
           {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
           {/block:Date}
+        {block:Title}
+        %strong
+          %a{:href => "{Permalink}"} {Title}
+        {/block:Title}
+        {Body}
+        
         {block:HasTags}
         .text_tags
           {block:Tags}
@@ -44,16 +46,16 @@
         {/block:Text}
       {block:Link}
       .post_link
-        %strong
-          <a href="{URL}" class="link" {Target}>{Name}
-        {block:Description}
-        .description {Description}
-        {/block:Description}
-        
         {block:Date}
         .timestamp
           {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
           {/block:Date}
+        %strong
+          <a href="{URL}" {Target}>{Name}
+        {block:Description}
+        .description {Description}
+        {/block:Description}
+        
         {block:HasTags}
         .link_tags
           {block:Tags}
@@ -63,16 +65,17 @@
         {/block:Link}
       {block:Quote}
       .post_quote
+        {block:Date}
+        .timestamp
+          {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
+          {/block:Date}
         "{Quote}"
+        
         {block:Source}
         %strong
           .source &ndash; {Source}
         {/block:Source}
         
-        {block:Date}
-        .timestamp
-          {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
-          {/block:Date}
         {block:HasTags}
         .quote_tags
           {block:Tags}
@@ -80,6 +83,28 @@
           {/block:Tags}
           {/block:HasTags}
         {/block:Quote}
+      {block:Photo}
+      .post_photo
+        {block:Date}
+        .timestamp
+          {Month} {DayOfMonth}, {Year} {12Hour}:{Minutes}{CapitalAmPm}
+          {/block:Date}
+        %a{:href => "{PhotoURL-500}"}
+          %img{:alt => "{PhotoAlt}", :src => "{PhotoURL-500}"}/
+        {block:Caption}
+        .caption {Caption}
+        {/block:Caption}
+        
+        {block:HasTags}
+        .image_tags
+          {block:Tags}
+          %a{:href => "{TagURLChrono}"} \#{Tag}
+          {/block:Tags}
+          {/block:HasTags}
+        {/block:Photo}
+      {/block:Posts}
+      
+      
       {block:Pagination}
       .page
         {block:PreviousPage}
