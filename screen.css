@@ -72,7 +72,7 @@ header#header {
 }
 
 header#header h1 a {
-  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
+  font-family: Didot, â€œDidot LT STDâ€, â€œHoefler Textâ€, Garamond, â€œTimes    New Romanâ€, serif;
   text-decoration:none;
   color: #FFA987;
 }
@@ -82,7 +82,7 @@ header#header h1 a:hover, a:active{
 }
 
 #description {
-  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
+  font-family: Didot, â€œDidot LT STDâ€, â€œHoefler Textâ€, Garamond, â€œTimes    New Romanâ€, serif;
   color: #FFFFFF;
   font-size: 75%;
   margin: 0% 25%;
@@ -93,7 +93,7 @@ body {
 }
 
 .post_text {
-  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
+  font-family: Didot, â€œDidot LT STDâ€, â€œHoefler Textâ€, Garamond, â€œTimes New Romanâ€, serif;
   color: #A51818;
 	font-size: 150%;
 	line-height: 1.25em;
@@ -105,7 +105,7 @@ body {
 }
 
 .post_link {
-  font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times    New Roman”, serif;
+  font-family: Didot, â€œDidot LT STDâ€, â€œHoefler Textâ€, Garamond, â€œTimes    New Romanâ€, serif;
   color: #A51818;
 	font-size: 150%;
 	line-height: 1.25em;
@@ -117,7 +117,7 @@ body {
 }
 
 .post_quote {
-    font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
+    font-family: Didot, â€œDidot LT STDâ€, â€œHoefler Textâ€, Garamond, â€œTimes New Romanâ€, serif;
   color: #A51818;
 	font-size: 250%;
 	line-height: 1.25em;
@@ -135,7 +135,7 @@ body {
 }
 
 .post_photo {
-    font-family: Didot, “Didot LT STD”, “Hoefler Text”, Garamond, “Times New Roman”, serif;
+    font-family: Didot, â€œDidot LT STDâ€, â€œHoefler Textâ€, Garamond, â€œTimes New Romanâ€, serif;
   color: #A51818;
 	font-size: 250%;
 	line-height: 1.25em;
@@ -151,6 +151,7 @@ body {
   color: #1E1E24;
   font-size: 200%;
   line-height: 1em;
+  text-align: left;
 }
 
 .post_link a {
@@ -160,51 +161,39 @@ body {
   text-align:left;
 }
 
+.post_text a:hover, a:active {
+  color: #776F6F;
+}
+
+.post_link a:hover, a:active {
+  color: #776F6F;
+}
+
 .timestamp {
   color: #000000;
   text-align: right;
-  font-family: ‘Arial Narrow’, sans-serif;
-  font-size: 15px;
+  font-family: â€˜Arial Narrowâ€™, sans-serif;
+  font-size: 10px;
 }
 
-.text_tags, .link_tags, .quote_tags, link_tags {
+.text_tags, .link_tags, .quote_tags, .image_tags {
   text-align: left;
 }
 
-.text_tags a, .link_tags a, .quote_tags a, link_tags a {
+.text_tags a, .link_tags a, .quote_tags a, .image_tags a {
   text-decoration: none;  
   color:#1E1E24;
-  font-size: 25px;
+  font-size: 15px;
 }
 
-.page {
-  text-align: center;
-  color: white;
-  font-size: 150%;
-}
-
-.page a:link, a:visited {
-  text-decoration: none;
-  color: white;
-  font-size: 75%;
-}
-
-.page a:hover, a:active {
-  color: #776F6F;
+img {
+  max-width: 100%;
 }
 
 @media screen and (max-width: 45em) {
 
-.post_text  {
+.post_text, .post_link, .post_quote, .post_photo {
     margin: 2.5% 2.5%;
-}
-
-.post_link {
-    margin: 2.5% 2.5%;
-}
-
-.post_quote {
-  margin: 2.5% 2.5%;
 }
 
 #description  {
@@ -212,9 +201,28 @@ body {
     margin: 0% 10%;
 }
 
-@media screen and (max-width: 65em) {
+.page {
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 150%;
+}
+
+.page a:link, a:visited {
+  text-decoration: none;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 75%;
+}
+
+.page a:hover, a:active {
+  text-decoration: none;
+  color: #776F6F;
+}
+
+
+@media screen and (max-width: 50em) {
 
 #description  {
-    margin: 0% 10%;
+    margin: 0% 10% 10% 10%;
 }
 }
